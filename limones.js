@@ -112,3 +112,14 @@ function detectarPiso(){
     
 
 }
+function reiniciar(){
+    puntaje = 0;
+    vidas = 5;
+    personaje =canvas.width / 2;
+    document.getElementById("txtPuntaje").textContent = puntaje;
+    document.getElementById("txtVidas").textContent = vidas;
+    clearInterval(interval);
+    iniciar();
+    cambiarVelocidad(200);
+    
+}
