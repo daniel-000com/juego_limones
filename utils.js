@@ -5,3 +5,7 @@ function generaAleatorio(min,max){
     numeroEntero = numeroEntero+min;
     return numeroEntero 
 }
+function mostrarSpam(idSpam, valor){
+        let componente=document.getElementById(idSpam);
+        componente.textContent=valor;
+}

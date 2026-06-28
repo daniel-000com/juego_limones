@@ -11,9 +11,14 @@ let personajex = canvas.width/2-40
 let personajeY = canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
 let limonX = canvas.width/2-40;
 let limonY = 0;
+let puntaje=0;
+let vidas=5;
+let velocidaCaida=200;
+
 
 
 function iniciar(){
+    interval=setInterval(bajarLimon,velocidaCaida)
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -50,6 +55,7 @@ function bajarLimon(){
     limonY = limonY +10;
     actualizarPantalla();
     detectarColicion();
+    detectarPiso();
 }
 
 function actualizarPantalla(){
@@ -61,6 +67,8 @@ function actualizarPantalla(){
 function detectarColicion(){
     if(limonX+ANCHO_LIMON>personajex && limonX < personajex+ANCHO_PERSONAJE && limonY+ALTURA_LIMON>personajeY && limonY < personajeY+ALTURA_PERSONAJE){
         aparecerLimon();
+        puntaje=puntaje +1;
+        mostrarSpam("txtPuntaje",puntaje);
         
         }
 }
@@ -72,4 +80,13 @@ function aparecerLimon(){
     limonX=generaAleatorio(0,canvas.width-ANCHO_LIMON);
     limonY=0;
     actualizarPantalla();
+}
+function detectarPiso(){
+    if(limonY+ALTURA_LIMON==canvas.height-ALTURA_SUELO){
+        aparecerLimon();
+        vidas=vidas - 1;
+        mostrarSpam("txtVidas",vidas);
+    }
+    
+
 }
