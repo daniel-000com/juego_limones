@@ -64,11 +64,28 @@ function actualizarPantalla(){
     dibujarSuelo();
     dibujarLimon(); 
 }
+
+function cambiarVelocidad(nuevaVelocidad){
+    clearInterval(interval);
+    velocidaCaida=nuevaVelocidad;
+    interval = setInterval(bajarLimon,velocidaCaida);
+}
+
 function detectarColicion(){
     if(limonX+ANCHO_LIMON>personajex && limonX < personajex+ANCHO_PERSONAJE && limonY+ALTURA_LIMON>personajeY && limonY < personajeY+ALTURA_PERSONAJE){
         aparecerLimon();
         puntaje=puntaje +1;
         mostrarSpam("txtPuntaje",puntaje);
+        if (puntaje == 3){
+        cambiarVelocidad(150);
+        }
+        if (puntaje == 6) {
+        cambiarVelocidad(100);
+        }
+        if (puntaje== 10 ){
+            alert("ganaste, ya pueders hacer limonada");
+            clearInterval(interval);
+        }
         
         }
 }
