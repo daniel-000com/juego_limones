@@ -105,6 +105,7 @@ function detectarPiso(){
         mostrarSpam("txtVidas",vidas);
         if (vidas==0){
             alert("GAME OVER");
+            clearInterval(interval);
 
         }
     }
