@@ -89,7 +89,7 @@ function detectarColicion(){
         
         }
 }
-function probarAleatorio9(){
+function probarAleatorio(){
     let aleatorio=generaAleatorio(10,80);
     console.log (aleatorio);
 }
@@ -98,7 +98,7 @@ function aparecerLimon(){
     limonY=0;
     actualizarPantalla();
 }
-function detectarPiso(){
+function detectarPiso(){  
     if(limonY+ALTURA_LIMON==canvas.height-ALTURA_SUELO){
         aparecerLimon();
         vidas=vidas - 1;
@@ -115,7 +115,7 @@ function detectarPiso(){
 function reiniciar(){
     puntaje = 0;
     vidas = 5;
-    personaje =canvas.width / 2;
+    personajex =canvas.width / 2;
     document.getElementById("txtPuntaje").textContent = puntaje;
     document.getElementById("txtVidas").textContent = vidas;
     clearInterval(interval);
