@@ -115,7 +115,7 @@ function detectarPiso(){
 function reiniciar(){
     puntaje = 0;
     vidas = 5;
-    personajex =canvas.width / 2;
+    personajex =canvas.width / 2-40;
     document.getElementById("txtPuntaje").textContent = puntaje;
     document.getElementById("txtVidas").textContent = vidas;
     clearInterval(interval);
