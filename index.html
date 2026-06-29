@@ -1,32 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-  <link rel ="stylesheet" href="limones.css"/>
-  
-  <title>Caza Estrellas</title>
- 
- 
-</head>dibujarSuelo
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caza Estrellas</title>
+
+    <link rel="stylesheet" href="limones.css">
+
+</head>
+
 <body onload="iniciar()">
-  <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
-    <h2>autor: Daniel Orrala</h2>
-    <canvas id="areaJuegos" width="600" height="400"></canvas>
-    
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>vidas: <span id="txtVidas">5</span></p>
+     
+
+    <div class="contenedor">
+      <div class="logo">
+       <img src="FB93A604-09A4-48FF-B368-E75D6C3976B2.PNG" alt="Logo Octopus Gaming">
+     </div>
+
+        <header>
+
+            <h1>🍋 Atrapar Limones</h1>
+
+            <p class="descripcion">
+                Si del cielo te caen limones...
+                ¡Atrápalos antes de que toquen el suelo!
+            </p>
+
+            <p class="autor">Daniel Orrala</p>
+
+        </header>
+
+        <div class="panel">
+
+            <div class="tarjeta">
+
+                <span class="titulo">🏆 Puntaje</span>
+
+                <span id="txtPuntaje">0</span>
+
+            </div>
+
+            <div class="tarjeta">
+
+                <span class="titulo">❤️ Vidas</span>
+
+                <span id="txtVidas">5</span>
+
+            </div>
+
+        </div>
+
+        <div class="zonaJuego">
+
+            <canvas id="areaJuegos" width="600" height="400"></canvas>
+
+        </div>
+
+        <div class="botones">
+
+            <button onclick="moverIzquierda()">⬅ Izquierda</button>
+
+            <button onclick="moverDerecha()">Derecha ➡</button>
+
+            <button class="reiniciar" onclick="reiniciar()">
+                🔄 Reiniciar
+            </button>
+
+        </div>
+
     </div>
-    <div class="botones">
-      <button onclick="moverIzquierda()">Izquierda</button>
-      <button onclick="moverDerecha()">Derecha</button>
-      <br>
-      <button onclick="reiniciar()">Reiniciar</button>
-    </div>
-  </div>
 
 </body>
+
 <script src="limones.js"></script>
 <script src="utils.js"></script>
+
 </html>

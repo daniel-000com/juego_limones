@@ -25,7 +25,7 @@ function iniciar(){
 }
 
 function dibujarSuelo(){
-    ctx.fillStyle="blue";
+    ctx.fillStyle="#cf7f10";
     ctx.fillRect(0,canvas.height-ALTURA_SUELO,canvas.width,ALTURA_SUELO);
 }
 function dibujarPersonaje(){
