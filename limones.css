@@ -8,7 +8,7 @@ body{
 
     font-family:Arial, Helvetica, sans-serif;
 
-    background:linear-gradient(180deg,#488c5f,#3b838d);
+    background:linear-gradient(180deg,#060606,#0b401e);
 
     min-height:100vh;
 
@@ -26,7 +26,7 @@ body{
 
     width:850px;
 
-    background:rgb(126, 228, 128);
+    background:linear-gradient(180deg,#4ad114,#0b6912);
 
     border-radius:5px;
 
@@ -46,7 +46,7 @@ header{
 
 h1{
 
-    color:#2e7d32;
+    color:#d9ff03;
 
     font-size:40px;
 
@@ -133,13 +133,13 @@ h1{
 
 canvas{
 
-    background:linear-gradient(#81d4fa,#2b3438);
+    background:linear-gradient(#154310,#111313);
 
-    border:6px solid #43a047;
+    border:6px solid #8de215;
 
     border-radius:20px;
 
-    box-shadow:0 12px 25px rgba(0,0,0,.25);
+    box-shadow:0 12px 25px rgba(228, 232, 0, 0.392);
 
 }
 
@@ -173,7 +173,7 @@ button{
 
     transition:.25s;
 
-    box-shadow:0 6px 12px rgba(0,0,0,.2);
+    box-shadow:0 6px 12px rgba(0, 0, 0, 0.532);
 
 }
 
