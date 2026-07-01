@@ -2,11 +2,11 @@ let canvas;
 let ctx;
 canvas=document.getElementById("areaJuegos");
 ctx=canvas.getContext("2d");
-const ALTURA_SUELO =30;
-const ALTURA_PERSONAJE =40;
-const ANCHO_PERSONAJE =80;
-const ALTURA_LIMON =40;
-const ANCHO_LIMON =40;
+let ALTURA_SUELO =30;
+let ALTURA_PERSONAJE =10;
+let ANCHO_PERSONAJE =20;
+const ALTURA_LIMON =80;
+const ANCHO_LIMON =80;
 let personajex = canvas.width/2-40
 let personajeY = canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
 let limonX = canvas.width/2-40;
@@ -29,7 +29,7 @@ function dibujarSuelo(){
     ctx.fillRect(0,canvas.height-ALTURA_SUELO,canvas.width,ALTURA_SUELO);
 }
 function dibujarPersonaje(){
-    ctx.fillStyle="#F5A327";
+    ctx.fillStyle="#f52727";
     ctx.fillRect(personajex,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
@@ -48,7 +48,7 @@ function refrescarPantalla(){
 }
 
 function dibujarLimon(){
-    ctx.fillStyle="#61f527";
+    ctx.fillStyle="#e4a907";
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
 }
 function bajarLimon(){
@@ -104,7 +104,7 @@ function detectarPiso(){
         vidas=vidas - 1;
         mostrarSpam("txtVidas",vidas);
         if (vidas==0){
-            alert("GAME OVER");
+            alert("has perdidi el juego");
             clearInterval(interval);
 
         }
@@ -122,4 +122,8 @@ function reiniciar(){
     iniciar();
     cambiarVelocidad(200);
     
+}
+
+function desaparecerPersonaje(){
+    ctx.clearRect(personajex, personajeY, ANCHO_PERSONAJE, ALTURA_PERSONAJE);
 }
