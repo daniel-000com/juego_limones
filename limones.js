@@ -49,7 +49,7 @@ function refrescarPantalla(){
 }
 
 function dibujarLimon(){
-    ctx.fillStyle="#e4a907";
+    ctx.fillStyle="#52c500";
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
 }
 function bajarLimon(){

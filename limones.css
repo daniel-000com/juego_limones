@@ -5,10 +5,13 @@
 }
 
 body{
+    background-image:url("1F87D7BA-7D78-47E2-8497-602579C0EE35.GIF");
+    background-size:cover;
+    background-position:center;
 
     font-family:Arial, Helvetica, sans-serif;
 
-    background:linear-gradient(180deg,#060606,#0b401e);
+   background:linear-gradient(180deg,#103a1e,#04461a);
 
     min-height:100vh;
 
@@ -23,16 +26,20 @@ body{
 }
 
 .contenedor{
+    background-image:url("1F87D7BA-7D78-47E2-8497-602579C0EE35.GIF");
+    background-size:cover;
+    background-position:center;
 
     width:850px;
 
-    background:linear-gradient(180deg,#38a10e,#0b6912);
+    border:6px solid #8de215ac;
+    box-shadow:0 12px 25px rgba(228, 232, 0, 0.461);
 
-    border-radius:5px;
+    border-radius:15px;
 
     padding:30px;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
+   
 
 }
 
@@ -86,7 +93,7 @@ h1{
 
 .tarjeta{
 
-    background:#ffda75;
+    background:#ffb375;
 
     border-radius:18px;
 
@@ -139,7 +146,7 @@ canvas{
 
     border-radius:20px;
 
-    box-shadow:0 12px 25px rgba(228, 232, 0, 0.392);
+    box-shadow:0 12px 25px rgba(228, 232, 0, 0.498);
 
 }
 
@@ -180,7 +187,7 @@ button{
 
 button:hover{
 
-    background:#e38623;
+    background:#d56f02;
 
     transform:translateY(-3px);
 
@@ -205,13 +212,13 @@ button:active{
 }
 .aleatorio{
 
-    background:#00a3ef;
+    background:#13bb0d;
 
 }
 
 .aleatorio:hover{
 
-    background:#1576d8;
+    background:#15d82c;
 
 }
 .logo{
@@ -232,7 +239,7 @@ button:active{
 
     transition:.3s;
 
-    filter:drop-shadow(0 8px 15px rgba(0,0,0,.25));
+    filter:drop-shadow(0 8px 15px rgba(252, 249, 249, 0.88));
 
 }
 
